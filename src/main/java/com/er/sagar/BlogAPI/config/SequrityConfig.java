@@ -29,7 +29,7 @@ public class SequrityConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // Allow all paths
-                        .allowedOrigins("https://blog-app-tau-black-26.vercel.app/") // Allow frontend origin
+                        .allowedOrigins("https://blog-app-wq2w.vercel.app/") // Allow frontend origin
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS");
                 // .allowedHeaders("*")
                 // .allowCredentials(true);
