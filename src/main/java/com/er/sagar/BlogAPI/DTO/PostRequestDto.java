@@ -8,7 +8,7 @@ public class PostRequestDto {
     private String image;
     private String title;
     private String description;
-    private int user;
+    private Long user;
 
     public void setImage(String image) {
         this.image = image;
@@ -34,11 +34,11 @@ public class PostRequestDto {
         return description;
     }
 
-    public void setUser(int user) {
+    public void setUser(Long user) {
         this.user = user;
     }
 
-    public Integer getUser() {
+    public Long getUser() {
         return user;
     }
 

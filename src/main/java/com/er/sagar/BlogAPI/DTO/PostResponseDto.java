@@ -12,11 +12,11 @@ import jakarta.persistence.JoinColumn;
 @Component
 public class PostResponseDto {
 
-    private int id;
+    private Long id;
     private String image;
     private String title;
     private String description;
-    private int userId;
+    private Long userId;
     private String postedBy;
 
     public PostResponseDto() {
@@ -33,11 +33,11 @@ public class PostResponseDto {
     }
 
     // Getters and Setters
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -65,11 +65,11 @@ public class PostResponseDto {
         this.description = description;
     }
 
-    public int getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 

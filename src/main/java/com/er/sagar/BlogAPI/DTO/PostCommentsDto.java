@@ -7,11 +7,11 @@ import com.er.sagar.BlogAPI.entities.PostComments;
 @Component
 public class PostCommentsDto {
 
-    private int id;
+    private Long id;
     private String comment;
     private String commentedBy;
-    private int post;
-    private int user;
+    private Long post;
+    private Long user;
 
     public PostCommentsDto() {
 
@@ -26,11 +26,11 @@ public class PostCommentsDto {
 
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void getId(int id) {
+    public void getId(Long id) {
         this.id = id;
     }
 
@@ -50,19 +50,19 @@ public class PostCommentsDto {
         this.commentedBy = commentedBy;
     }
 
-    public int getPost() {
+    public Long getPost() {
         return post;
     }
 
-    public void setPostId(int post) {
+    public void setPostId(Long post) {
         this.post = post;
     }
 
-    public int getUser() {
+    public Long getUser() {
         return user;
     }
 
-    public void setUser(int user) {
+    public void setUser(Long user) {
         this.user = user;
     }
 

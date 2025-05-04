@@ -5,33 +5,33 @@ import org.springframework.stereotype.Component;
 @Component
 public class CommentsRequestDto {
 
-    private int user;
-    private int post;
+    private Long user;
+    private Long post;
     private String comment;
 
     public CommentsRequestDto() {
 
     }
 
-    public CommentsRequestDto(int user, int post, String comment) {
+    public CommentsRequestDto(Long user, Long post, String comment) {
         this.user = user;
         this.post = post;
         this.comment = comment;
     }
 
-    public int getUser() {
+    public Long getUser() {
         return user;
     }
 
-    public void setUser(int user) {
+    public void setUser(Long user) {
         this.user = user;
     }
 
-    public int getPost() {
+    public Long getPost() {
         return post;
     }
 
-    public void setPost(int post) {
+    public void setPost(Long post) {
         this.post = post;
     }
 

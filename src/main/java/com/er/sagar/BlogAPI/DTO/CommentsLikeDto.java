@@ -4,10 +4,10 @@ import com.er.sagar.BlogAPI.entities.CommentsLike;
 
 public class CommentsLikeDto {
 
-    private int id;
-    private int userId;
+    private Long id;
+    private Long userId;
     private String likedBy;
-    private int commentId;
+    private Long commentId;
 
     public CommentsLikeDto() {
 
@@ -20,19 +20,19 @@ public class CommentsLikeDto {
         this.commentId = commentsLike.getPostComments().getId();
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public int getUserId() {
+    public Long getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Long userId) {
         this.userId = userId;
     }
 
@@ -44,11 +44,11 @@ public class CommentsLikeDto {
         this.likedBy = likedBy;
     }
 
-    public int getCommentId() {
+    public Long getCommentId() {
         return commentId;
     }
 
-    public void setCommentId(int commentId) {
+    public void setCommentId(Long commentId) {
         this.commentId = commentId;
     }
 }
