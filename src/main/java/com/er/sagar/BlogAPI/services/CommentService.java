@@ -45,7 +45,7 @@ public class CommentService {
 
     }
 
-    public List<PostCommentsDto> getCommentByPostId(int postId) {
+    public List<PostCommentsDto> getCommentByPostId(Long postId) {
         Optional<Post> post = postRepo.findById(postId);
         return postCommentRepo.findPostCommentsByPost(post.get());
 

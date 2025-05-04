@@ -30,7 +30,7 @@ public class PostService {
 
     }
 
-    public List<Post> getAllPostByUser(int userId) {
+    public List<Post> getAllPostByUser(Long userId) {
         Optional<User> optionlUser = userRepo.findById(userId);
         if (optionlUser.isPresent()) {
             return postRepo.findByUser(optionlUser.get());
