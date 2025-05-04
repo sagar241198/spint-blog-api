@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.er.sagar.BlogAPI.entities.PostLike;
 
 @Repository
-public interface PostLikesRepo extends JpaRepository<PostLike, Integer> {
+public interface PostLikesRepo extends JpaRepository<PostLike, Long> {
 
 }

@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.er.sagar.BlogAPI.entities.CommentsReply;
 
 @Repository
-public interface CommentReplyRepo extends JpaRepository<CommentsReply, Integer> {
+public interface CommentReplyRepo extends JpaRepository<CommentsReply, Long> {
 
 }

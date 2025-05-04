@@ -10,7 +10,7 @@ import com.er.sagar.BlogAPI.entities.Post;
 import com.er.sagar.BlogAPI.entities.PostComments;
 
 @Repository
-public interface PostCommentRepo extends JpaRepository<PostComments, Integer> {
+public interface PostCommentRepo extends JpaRepository<PostComments, Long> {
 
     List<PostCommentsDto> findPostCommentsByPost(Post post);
 

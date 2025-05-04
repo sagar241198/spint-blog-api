@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.er.sagar.BlogAPI.entities.User;
 
 @Repository
-public interface UserRepo extends JpaRepository<User, Integer> {
+public interface UserRepo extends JpaRepository<User, Long> {
 
     User findUserByEmail(String email);
 

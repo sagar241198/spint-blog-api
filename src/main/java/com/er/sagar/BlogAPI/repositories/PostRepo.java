@@ -9,7 +9,7 @@ import com.er.sagar.BlogAPI.entities.Post;
 import com.er.sagar.BlogAPI.entities.User;
 
 @Repository
-public interface PostRepo extends JpaRepository<Post, Integer> {
+public interface PostRepo extends JpaRepository<Post, Long> {
 
     List<Post> findByUser(User user);
 }

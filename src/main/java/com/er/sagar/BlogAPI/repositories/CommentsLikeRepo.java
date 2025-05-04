@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.er.sagar.BlogAPI.entities.CommentsLike;
 
 @Repository
-public interface CommentsLikeRepo extends JpaRepository<CommentsLike, Integer> {
+public interface CommentsLikeRepo extends JpaRepository<CommentsLike, Long> {
 
 }
