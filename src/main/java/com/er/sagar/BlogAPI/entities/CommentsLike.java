@@ -10,8 +10,8 @@ import jakarta.persistence.ManyToOne;
 public class CommentsLike {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @ManyToOne
     private PostComments postComments;
@@ -28,11 +28,11 @@ public class CommentsLike {
         this.user = user;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
