@@ -30,10 +30,11 @@ public class PostService {
 
     }
 
-    public List<Post> getAllPostByUser(Long userId) {
+    public List<PostResponseDto> getAllPostByUser(Long userId) {
         Optional<User> optionlUser = userRepo.findById(userId);
         if (optionlUser.isPresent()) {
-            return postRepo.findByUser(optionlUser.get());
+            List<Post> posts = postRepo.findByUser(optionlUser.get());
+            return posts.stream().map(PostResponseDto::new).collect(Collectors.toList()); // needs to check this  method
         } else {
             throw new RuntimeException("User not found with id: " + userId);
 
