@@ -41,17 +41,21 @@ public class PostLikeService {
         if (user == null) {
             throw new RuntimeException("User not found");
         }
-
         Post post = postRepo.findById(listInfo.getPostId()).orElse(null);
-
         PostLike postLike = new PostLike(post, user);
-
         PostLike savedLike = postLikeRepo.save(postLike);
-
-        // Convert back to DTO to return (optional, or just return the saved entity ID)
         PostLikesDto response = new PostLikesDto(savedLike);
 
         return response;
+    }
+
+    public List<PostLikesDto> likesByPost(long postId) {
+        Post post = postRepo.findById(postId).orElse(null);
+        if (post != null) {
+            List<PostLike> likesPost = postLikeRepo.findByPost(post);
+            return likesPost.stream().map(PostLikesDto::new).collect(Collectors.toList());
+        }
+        throw new UnsupportedOperationException("There is no likes for this post id please check your post Id");
     }
 
 }

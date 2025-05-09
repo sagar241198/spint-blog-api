@@ -55,4 +55,13 @@ public class PostService {
         }
     }
 
+    public PostResponseDto getPostById(Long postId) {
+        Post post = postRepo.findById(postId).orElse(null);
+        if (post != null) {
+            PostResponseDto postResponse = new PostResponseDto(post);
+            return postResponse;
+        }
+        throw new UnsupportedOperationException("No post Available with this post id'");
+    }
+
 }
